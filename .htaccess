@@ -1,0 +1,12 @@
+RewriteEngine On
+
+## 301 Redirects
+# 301 Redirect 1
+RewriteCond %{REQUEST_URI}  ^$
+RewriteRule ^index\.html$ http://html/home.html/$1? [P]
+
+# 301 Redirect 2
+RewriteCond %{REQUEST_URI}  ^$
+RewriteRule ^html/movies\.html$ mirific.us:32400? [R=301,NE,NC,L]
+
+RewriteRule .* / [L,R=302]
